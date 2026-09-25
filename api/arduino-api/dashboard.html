@@ -39,7 +39,7 @@
     <header class="relative overflow-hidden border-b border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
         <div class="absolute inset-0 weather-gradient opacity-5"></div>
         <div class="container mx-auto px-4 py-6 relative">
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-5">
                 <div class="flex items-center gap-6">
                     <div class="relative">
                         <img src="/assets/logo_su.png" alt="CIDA" class="w-16 h-16 rounded-xl shadow-xl ring-2 ring-primary/20">
@@ -52,7 +52,21 @@
                         <p class="text-gray-600">Monitoramento em tempo real</p>
                     </div>
                 </div>
+
+                <nav class="flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-gray-700">
+                    <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-primary transition-colors">Início</a>
+                    <a href="index.html#sobre" class="px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-primary transition-colors">Sobre</a>
+                    <a href="index.html#contato" class="px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-primary transition-colors">Contato</a>
+                    <a href="dashboard.html" class="px-3 py-2 rounded-lg hover:bg-orange-50 hover:text-secondary transition-colors">Dashboard</a>
+                </nav>
+
                 <div class="flex items-center gap-4">
+                    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414-1.414L12.586 10H4a1 1 0 110-2h8.586l-4.293-4.293a1 1 0 111.414-1.414l6 6a1 1 0 010 1.414l-6 6z" clip-rule="evenodd"/>
+                        </svg>
+                        Voltar
+                    </a>
                     <div class="flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
                         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                         Online

@@ -66,12 +66,25 @@
                         </div>
                     </div>
                 </div>
+
+                <nav class="flex flex-wrap items-center justify-center gap-3 text-sm font-medium text-gray-700">
+                    <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-primary transition-colors">Início</a>
+                    <a href="#sobre" class="px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-primary transition-colors">Sobre</a>
+                    <a href="#contato" class="px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-primary transition-colors">Contato</a>
+                    <a href="dashboard.html" class="px-3 py-2 rounded-lg hover:bg-orange-50 hover:text-secondary transition-colors">Dashboard</a>
+                </nav>
+
                 <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <a href="dashboard.html" class="inline-flex items-center gap-2 px-4 py-2 border border-gray-200 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414-1.414L12.586 10H4a1 1 0 110-2h8.586l-4.293-4.293a1 1 0 111.414-1.414l6 6a1 1 0 010 1.414l-6 6z" clip-rule="evenodd"/>
+                        </svg>
+                        Voltar
+                    </a>
                     <div class="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
                         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                         Sistema Online
                     </div>
-                    <!-- LINHA CORRIGIDA ABAIXO -->
                     <a href="dashboard.html" class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-lg">
                         Acessar Dashboard
                     </a>
@@ -178,6 +191,110 @@
             </div>
         </div>
     </main>
+
+    <section id="sobre" class="mb-16">
+        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-sm font-semibold tracking-[0.2em] text-primary uppercase mb-3">Sobre</p>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">CIDA: tecnologia para compreender o ambiente urbano</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        O CIDA nasce com a missão de transformar dados ambientais em informação útil para a comunidade,
+                        universidades e profissionais que desejam analisar como o clima se comporta em tempo real.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Através de sensores conectados, coleta de dados e uma interface moderna, o projeto oferece um
+                        panorama claro sobre temperatura, umidade e condições do ambiente, apoiando decisões mais
+                        inteligentes e sustentáveis.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl p-8 bg-gradient-to-br from-blue-50 via-white to-orange-50 border border-blue-100 shadow-inner">
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 2a1 1 0 011 1v1.07A7.002 7.002 0 0117 11a1 1 0 11-2 0 5 5 0 10-10 0 1 1 0 11-2 0 7.002 7.002 0 016 7.93V3a1 1 0 011-1zm0 4a3 3 0 100 6 3 3 0 000-6z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Monitoramento contínuo</h4>
+                                <p class="text-gray-600">Coleta automática de dados com atualização em tempo real para análise imediata.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm1 4h8a1 1 0 110 2H6a1 1 0 110-2zm0 4h5a1 1 0 110 2H6a1 1 0 110-2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Dados acessíveis</h4>
+                                <p class="text-gray-600">Visualização moderna e API pronta para integração com outros sistemas e aplicações.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414L8.414 15l-4.121-4.121a1 1 0 111.414-1.414L8.414 12.17l7.879-7.877a1 1 0 011.414 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Sustentabilidade</h4>
+                                <p class="text-gray-600">Apoio à tomada de decisão com soluções tecnológicas para ambientes urbanos mais inteligentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="mb-16">
+        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <p class="text-sm font-semibold tracking-[0.2em] text-secondary uppercase mb-3">Contato</p>
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Fale conosco</h3>
+                <p class="text-lg text-gray-600">
+                    Estamos abertos para parcerias, dúvidas, propostas e oportunidades de desenvolvimento.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center card-hover">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-primary">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">E-mail</h4>
+                    <a href="mailto:contato@cida.com.br" class="text-gray-600 hover:text-primary transition-colors">contato@cida.com.br</a>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center card-hover">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-green-600">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3.5A1.5 1.5 0 013.5 2h1.207a1.5 1.5 0 011.414 1.03l.492 1.478a1.5 1.5 0 01-1.028 1.9l-.617.206a11.293 11.293 0 005.27 5.27l.206-.617a1.5 1.5 0 011.9-1.028l1.478.492A1.5 1.5 0 0118 9.293V10.5A1.5 1.5 0 0116.5 12h-1.25A13.25 13.25 0 014 4.75V3.5A1.5 1.5 0 015.5 2H2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">WhatsApp</h4>
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition-colors">(11) 99999-9999</a>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center card-hover">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4 text-secondary">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a6 6 0 016 6c0 4.418-6 10-6 10S4 12.418 4 8a6 6 0 016-6zm0 8.5A2.5 2.5 0 1010 5a2.5 2.5 0 000 5.5z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Localização</h4>
+                    <p class="text-gray-600">São José dos Campos - SP</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="relative overflow-hidden border-t border-gray-200 bg-white/80 backdrop-blur-md mt-16">
         <div class="absolute inset-0 weather-gradient opacity-5"></div>

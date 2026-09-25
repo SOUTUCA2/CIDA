@@ -1,6 +1,6 @@
 # Arduino BMP280 Temperature Monitor
 
-Sentinelas Urbanas
+CIDA
 
 Este projeto exibe dados de temperatura de um sensor BMP280 conectado ao Arduino em uma interface web.
 

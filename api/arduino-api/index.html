@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinelas Urbanas - Estação Meteorológica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#fb8500',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .weather-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #fb8500 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 font-sans">
+    <header class="relative overflow-hidden border-b border-gray-200 bg-white/80 backdrop-blur-md">
+        <div class="absolute inset-0 weather-gradient opacity-5"></div>
+        <div class="container mx-auto px-4 py-8 relative">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-6">
+                    <div class="relative">
+                        <img src="/assets/logo_su.png" alt="Sentinelas Urbanas" class="w-20 h-20 rounded-xl shadow-xl ring-2 ring-primary/20">
+                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Sentinelas Urbanas
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 font-medium">Estação Meteorológica Inteligente</p>
+                        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-2 text-sm">
+                            <div class="flex items-center gap-1 text-primary">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.477.859h4z"/>
+                                </svg>
+                                <span>Dados em tempo real</span>
+                            </div>
+                            <span class="text-gray-400">•</span>
+                            <div class="flex items-center gap-1 text-secondary">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                <span>IoT Avançado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        Sistema Online
+                    </div>
+                    <!-- LINHA CORRIGIDA ABAIXO -->
+                    <a href="dashboard.html" class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-lg">
+                        Acessar Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Monitoramento Meteorológico Inteligente
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Sistema IoT avançado para coleta e análise de dados meteorológicos urbanos em tempo real. 
+                Utilizando sensores Arduino BME280 para temperatura e umidade, com interface web moderna 
+                e APIs RESTful para integração com outros sistemas.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-xl p-8 shadow-lg card-hover border border-gray-100">
+                <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Dados Precisos</h3>
+                <p class="text-gray-600 text-center">
+                    Sensores BME280 calibrados para medições precisas de temperatura e umidade relativa do ar.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg card-hover border border-gray-100">
+                <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Tempo Real</h3>
+                <p class="text-gray-600 text-center">
+                    Atualização automática dos dados a cada 5 segundos com visualização em gráficos dinâmicos.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg card-hover border border-gray-100">
+                <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">API RESTful</h3>
+                <p class="text-gray-600 text-center">
+                    Endpoints JSON para integração com outros sistemas e aplicações de terceiros.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Especificações Técnicas</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold text-primary mb-4">Hardware</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            ESP32 DEV KIT V1
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            Sensor BME280 (Temperatura, Umidade e Pressão Atmosférica)
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            Conexão Serial USB
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            Alimentação 5V
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-secondary mb-4">Software</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            Node.js + Express API
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            Interface Web Responsiva
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            Gráficos em Tempo Real
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            Previsão do Tempo Integrada
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="relative overflow-hidden border-t border-gray-200 bg-white/80 backdrop-blur-md mt-16">
+        <div class="absolute inset-0 weather-gradient opacity-5"></div>
+        <div class="container mx-auto px-4 py-8 relative">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="text-center md:text-left">
+                    <p class="text-sm font-medium text-gray-800">© 2025 Sentinelas Urbanas</p>
+                    <p class="text-xs text-gray-600">Sistema de monitoramento meteorológico urbano inteligente</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        Sistema operacional
+                    </div>
+                    <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium">v2.0</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

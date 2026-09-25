@@ -1,0 +1,16 @@
+{
+  "name": "arduino-api",
+  "version": "1.0.0",
+  "description": "Node.js API to read temperature data from Arduino via serial port",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^13.0.0",
+    "axios": "^1.11.0",
+    "chart.js": "^4.4.0",
+    "express": "^4.21.2",
+    "serialport": "^10.5.0"
+  }
+}
